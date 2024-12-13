@@ -67,6 +67,11 @@ function App() {
 
     const portfolioId = uuidv4();
     const formData = new FormData();
+    formData.append('title', newPortfolioItem.title);
+    formData.append('category', newPortfolioItem.category);
+    formData.append('type', newPortfolioItem.type);
+    formData.append('orientation', newPortfolioItem.orientation);
+    formData.append('video', newPortfolioItem.video);
     formData.append('file', newPortfolioItem.image);
 
     try {
