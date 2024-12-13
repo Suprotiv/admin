@@ -75,7 +75,7 @@ function App() {
     formData.append('file', newPortfolioItem.image);
 
     try {
-      await axios.post(`/upload/portfolio/${portfolioId}`, formData, {
+      await axios.post(`${API_URL}/api/portfolio/addproject`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
