@@ -236,10 +236,10 @@ function App() {
             <div className="space-y-6">
               {portfolioItems.map((item) => (
                 <div key={item._id} className="p-4 border rounded-lg space-y-2 flex justify-between">
-                  <p><strong>Title:</strong> {item.title}</p>
-                  <p><strong>catgory:</strong> {item.category}</p>
-                  <p><strong>type:</strong> {item.type}</p>
-                  <p><strong>video:</strong> {item.video}</p>
+                  <p className='max-w-[20vh]'><strong>Title:</strong> {item.title}</p>
+                  <p  className='max-w-[20vh]'><strong>catgory:</strong> {item.category}</p>
+                  <p className='max-w-[20vh]'><strong>type:</strong> {item.type}</p>
+                  <p className='max-w-[20vh]'><strong>video:</strong> {item.video}</p>
                  <img  className='w-[20vh] h-[20vh] object-cover' src={item.image}/>
                   <button
                     onClick={() => handleDeletePortfolioItem(item._id)}
