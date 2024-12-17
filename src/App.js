@@ -114,7 +114,6 @@ function App() {
     formData.append('id', clientId);
     formData.append('name', newClient.name);
 
-    console.log(localStorage.getItem(TOKEN_KEY))
     try {
       await axios.post(`${API_URL}/api/portfolio/addclient`, formData, {
         headers: {
@@ -122,9 +121,7 @@ function App() {
           Authorization: `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
         },
       });
-
-      const newClientData = { id: clientId, name: newClient.name };
-      setClients([...clients, newClientData]);
+      
       setNewClient({ name: '', image: null });
       alert('Client added successfully');
     } catch (error) {
