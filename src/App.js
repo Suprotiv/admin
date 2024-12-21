@@ -22,7 +22,7 @@ function App() {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/portfolio/getclients`, {
+      const response = await axios.get(`${API_URL}/api/portfolio/getclientsadmin`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
         },
